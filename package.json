@@ -1,0 +1,27 @@
+{
+  "name": "kathamo",
+  "version": "0.0.1",
+  "description": "Documentation for Kathamo",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export -o ./build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodesVault/kathamo-doc"
+  },
+  "author": "Shu Ding <g@shud.in>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shuding/nextra-docs-template/issues"
+  },
+  "homepage": "https://kathamo.dev",
+  "dependencies": {
+    "next": "^13.4.5",
+    "nextra": "^2.7.1",
+    "nextra-theme-docs": "^2.7.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

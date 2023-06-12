@@ -1,0 +1,27 @@
+.container {
+	margin-top: 80px;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container .brand {
+	font-size: 50px;
+	font-weight: bold;
+	line-height: 1;
+	color: #06aa06;
+	margin-bottom: 8px;
+}
+.container .btn {
+	font-size: 14px;
+	font-weight: 500;
+	margin-top: 20px;
+	padding: 10px 20px;
+	background-color: #06aa06;
+	color: #fff;
+	border-radius: 5px;
+	text-decoration: none;
+	box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.20);
+}
+.container .btn:hover {
+	background-color: #06a306;
+}
