@@ -1,0 +1,14 @@
+{
+	"introduction": {
+		"title": "Introduction",
+		"theme": {
+			"breadcrumb": false
+		}
+	},
+	"contribution-guide": {
+		"title": "Contribution Guide",
+		"theme": {
+			"breadcrumb": false
+		}
+	}
+}

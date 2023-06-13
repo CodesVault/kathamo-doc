@@ -25,5 +25,7 @@ export default {
 	  },
     project: {
       link: 'https://github.com/CodesVault'
-    }
+    },
+	gitTimestamp: null,
+	primaryHue: 106
 }

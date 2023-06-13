@@ -1,7 +1,12 @@
 {
 	"index": {
 		"title": "Kathamo",
-		"type": "page"
+		"type": "page",
+		"display": "hidden",
+		"theme": {
+			"breadcrumb": false,
+			"pagination": false
+		}
 	},
 	"documentation": {
 		"title": "Documentation",
