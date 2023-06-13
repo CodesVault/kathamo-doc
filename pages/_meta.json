@@ -4,6 +4,7 @@
 		"type": "page",
 		"display": "hidden",
 		"theme": {
+			"navbar": false,
 			"breadcrumb": false,
 			"pagination": false
 		}
