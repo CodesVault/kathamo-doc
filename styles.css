@@ -35,6 +35,11 @@ a {
 	color: #06aa06;
 	margin-bottom: 8px;
 }
+.intro h3 {
+    font-family: fantasy;
+    font-size: 35px;
+    margin-top: 25px;
+}
 
 .contributors {
 	margin-bottom: 200px;
@@ -45,20 +50,21 @@ a {
 	grid-gap: 15px;
 }
 .contributors h2 {
-	font-size: 30px;
-	font-weight: 500;
+	font-size: 0;
 	margin-bottom: 15px;
 	visibility: hidden;
 	position: relative;
 }
 .contributors h2:before {
 	content: 'Contributors';
+    font-size: clamp(40px,14vw, 100px);
+	font-weight: bold;
 	visibility: visible;
     color: #f2ede5;
     position: absolute;
-    top: -65px;
-    left: 25px;
-    font-size: 120px;
+    top: -90px;
+	left: 50%;
+    transform: translate(-50%);
 }
 .dark .contributors h2:before {
 	color: #2e2d2d;
@@ -69,6 +75,7 @@ a {
 	box-shadow: 1px -4px 6px 0px rgba(0, 0, 0, 0.2);
 }
 .contributors li a {
+	display: inline-block;
 	position: relative;
 }
 .contributors li a:before {
@@ -111,4 +118,36 @@ a {
 }
 .footer-bottom a {
 	margin-left: 5px;
+}
+
+
+/* mobile device */
+@media only screen and (max-width : 650px) {
+	body {
+		overflow-x: hidden;
+	}
+
+	.intro p {
+		font-size: 11px;
+	}
+
+	.contributors ul {
+		grid-template-columns: repeat(5, 1fr);
+		justify-items: center;
+		grid-gap: 5px;
+	}
+	.contributors h2 {
+		text-align: center;
+		margin-bottom: 0;
+	}
+	.contributors h2:before {
+		font-size: clamp(40px,14vw, 100px);
+		position: relative;
+		top: auto;
+		left: auto;
+	}
+	.contributors li img {
+		width: 40px;
+		height: 40px;
+	}
 }
