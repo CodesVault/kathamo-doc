@@ -5,6 +5,12 @@
 			"breadcrumb": false
 		}
 	},
+	"installation": {
+		"title": "Installation",
+		"theme": {
+			"breadcrumb": false
+		}
+	},
 	"contribution-guide": {
 		"title": "Contribution Guide",
 		"theme": {

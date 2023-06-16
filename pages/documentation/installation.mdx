@@ -1,0 +1,39 @@
+import Image from 'next/image'
+
+Install the CLI using composer as global package.
+
+```php bash
+composer global require codesvault/kathamo-generator
+```
+
+Then set path as alias in your `.bashrc` or `.zshrc` file like this.
+
+```bash
+alias kathamo=""$(composer config -g home)/vendor/codesvault/kathamo-generator/bin/kathamo""
+```
+
+<br />
+<br />
+
+## CLI Usage
+
+Create a new plugin with Kathamo framework. From your terminal run this command
+```php bash
+kathamo create:plugin
+```
+
+<br />
+
+You can also create Controller, Migration file, Middleware, Service, etc using the CLI.
+```php bash
+kathamo make:controller
+kathamo make:migration
+kathamo make:middleware
+kathamo make:service
+```
+
+<br />
+
+## Architecture
+
+<Image src="/src/images/Kathamo-architecture.png" width={550} height={350} alt="Kathamo architecture" />
