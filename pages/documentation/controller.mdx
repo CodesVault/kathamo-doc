@@ -1,0 +1,58 @@
+Kathamo uses Controllers for two purposes: a) Register WordPress hooks and b) Render the view.
+
+Check out the example below to see how to use a controller. Always use the `register` method for WordPress action/filter hooks.
+
+```php
+class AdminMenuController extends BaseController
+{
+	use SingleTon;
+
+	public function register()
+	{
+		add_action( 'admin_menu', [ $this, 'addAdminMenu' ] );
+	}
+
+	public function addAdminMenu()
+	{
+		add_menu_page(
+			__( 'Kathamo', 'kathamo' ),
+			__( 'Kathamo', 'kathamo' ),
+			'manage_options',
+			'kathamo-adminmenu-slug',
+			[ $this, 'renderAdminMenu' ],
+			'dashicons-admin-generic',
+			40
+		);
+	}
+
+	public function renderAdminMenu()
+	{
+		$this->middleware( 'auth' );
+
+		$menu_data = AdminMenuService::getInstance();
+		$data      = $menu_data->getData();
+		$this->render( '/admin/admin-menu.php', $data );
+	}
+}
+```
+
+<br />
+
+## APIs
+
+Available helper methods for the Controllers class. But you have to extend the `BaseController` class.
+
+* `register` - Register WordPress hooks.
+* `render` - Render the view.
+* `validate` - Validate the data. Check out the [Validator](/documentation/validator) documentation for more details.
+* `middleware` - execute a middleware. Check out the [Validator](/documentation/middleware) documentation for more details.
+
+<br />
+
+## Create new Controller
+
+To create a new controller, just run the following command in the terminal and provide prompt inputs.
+
+```bash
+kathamo make:controller	# alias make:c
+```

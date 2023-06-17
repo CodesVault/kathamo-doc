@@ -11,6 +11,12 @@
 			"breadcrumb": false
 		}
 	},
+	"controller": {
+		"title": "Controller",
+		"theme": {
+			"breadcrumb": false
+		}
+	},
 	"contribution-guide": {
 		"title": "Contribution Guide",
 		"theme": {
