@@ -1,26 +1,8 @@
 {
-	"introduction": {
-		"title": "Introduction",
-		"theme": {
-			"breadcrumb": false
-		}
-	},
-	"installation": {
-		"title": "Installation",
-		"theme": {
-			"breadcrumb": false
-		}
-	},
-	"controller": {
-		"title": "Controller",
-		"theme": {
-			"breadcrumb": false
-		}
-	},
-	"contribution-guide": {
-		"title": "Contribution Guide",
-		"theme": {
-			"breadcrumb": false
-		}
-	}
+	"introduction": "Introduction",
+	"installation": "Installation",
+	"controller": "Controller",
+	"validator": "Validator",
+	"middleware": "Middleware",
+	"contribution-guide": "Contribution Guide"
 }

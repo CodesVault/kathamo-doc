@@ -1,0 +1,37 @@
+For data validation we have developed a composer package called [Validator](https://packagist.org/packages/codesvault/validator)
+You can use validator in controller and service classes very easily to validate data.
+
+## Example
+
+```php
+$validate = $this->validate( [
+	'email' => 'required|email',
+	'password' => 'required|min:8'
+	'username' => 'required|min:3|max:15|stringOnly'
+] );
+
+$error = $validator->error();
+if ($error) {
+	return $error;
+}
+$data = $validator->getData();
+```
+
+<br />
+
+## Available Rules
+
+| Rule | Description |
+| --- | --- |
+| required | Check if the field under validation is present in the input data and is not empty. |
+| email | Check if the field under validation is valid email address. |
+| url | Check if the field under validation is valid url. |
+| string | Check if the field under validation is string. |
+| stringOnly | Check if the field under validation is only string characters. |
+| stringWithSpace | Check if the field under validation is string with space. |
+| stringWithNumber | Check if the field under validation is string with number. |
+| StringWithDash | Check if the field under validation is string with dash and underscore. |
+| min | Check if the field under validation is greater than or equal to the given value. |
+| max | Check if the field under validation is less than or equal to the given value. |
+| integer | Check if the field under validation is integer. |
+| sameValue | Check if the field under validation is same as the given value. |

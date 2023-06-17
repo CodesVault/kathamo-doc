@@ -1,0 +1,11 @@
+In Kathamo middleware's are just some chunk of business logics that is executed between request and response.
+
+## Create new middleware
+
+To create a new middleware you just need to run the following command in the terminal and provide prompt inputs
+
+```bash
+kathamo make:middleware	 # alias make:mw
+```
+
+Note: Kathamo espects `handle` method in your middleware class. This method will be executed when the middleware is called.
