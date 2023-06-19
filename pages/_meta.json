@@ -6,7 +6,8 @@
 		"theme": {
 			"navbar": false,
 			"breadcrumb": false,
-			"pagination": false
+			"pagination": false,
+			"layout": "raw"
 		}
 	},
 	"documentation": {
