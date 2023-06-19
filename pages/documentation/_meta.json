@@ -2,7 +2,8 @@
 	"introduction": "Introduction",
 	"installation": "Installation",
 	"controller": "Controller",
-	"validator": "Validator",
 	"middleware": "Middleware",
+	"query-builder": "Query Builder",
+	"validator": "Validator",
 	"contribution-guide": "Contribution Guide"
 }

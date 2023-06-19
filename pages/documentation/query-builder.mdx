@@ -1,0 +1,40 @@
+We are using WP Query Builder in Kathamo which is also developed by CodesVault team.
+To know more about the Query Builder please visite 👉 <a href="https://wp-querybuilder.pages.dev/" target="_blank">WP Query Builder Documentation</a>.
+
+<br />
+
+Some examples are given below.
+
+## Create Table
+
+```php
+DB::create('querybuilder')
+    ->column('ID')->bigInt()->unsigned()->autoIncrement()->primary()->required()
+    ->column('name')->string(255)->required()
+    ->column('email')->string(255)->default('NULL')
+    ->index(['ID'])
+    ->execute();
+```
+
+<br />
+
+## Select from Table
+
+```php
+$data =
+DB::select('posts.ID', 'posts.post_title')
+    ->distinct()
+    ->from('posts posts')
+    ->where(function($query) {
+        $query->where('posts.post_status', '=', 'publish')
+            ->andWhere('posts.post_type', '=', 'page');
+    })
+    ->orderBy('post_title', 'DESC')
+    ->get();
+
+DB::select('posts.post_title')
+    ->from('posts posts')
+    ->innerJoin('term_relationships term_rel', 'posts.ID', 'term_rel.object_id')
+    ->where('posts.post_status', '=', 'publish')
+    ->get();
+```
