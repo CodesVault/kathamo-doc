@@ -18,7 +18,8 @@ export default {
 	},
 	head: () => {
 		const { asPath } = useRouter()
-		const { title } = useConfig()
+		let { title } = useConfig()
+		title = title == 'Index' ? 'Home' : title
 		return <>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 			<meta property="og:url" content={`https://kathamo.dev${asPath}`} />
@@ -30,6 +31,7 @@ export default {
 			<meta property="twitter:card" content="documentation" />
 			<meta property='og:image' content='//abmsourav.com/welcome/wp-content/uploads/2023/06/Kathamo-framework.png' />
 			<meta property='twitter:image' content='//abmsourav.com/welcome/wp-content/uploads/2023/06/Kathamo-framework.png' />
+			<title>{`${title} | Kathamo`}</title>
 	  </>
 	},
 	footer: {
