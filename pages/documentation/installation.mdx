@@ -2,15 +2,18 @@ import Image from 'next/image'
 
 Install the CLI using composer as global package.
 
-```php bash
-composer global require codesvault/kathamo-generator
-```
+Add Composer's system-wide vendor bin directory in your $PATH, so that Kathamo executable can be located by your system.
 
-Then set path as alias in your `.bashrc` or `.zshrc` file like this.
+* macOS: `$HOME/.composer/vendor/bin`
+* Windows: `%USERPROFILE%\AppData\Roaming\Composer\vendor\bin`
+* GNU / Linux Distributions: `$HOME/.config/composer/vendor/bin or $HOME/.composer/vendor/bin`
 
-```bash
-alias kathamo=""$(composer config -g home)/vendor/codesvault/kathamo-generator/bin/kathamo""
-```
+<br />
+If you've already have added composer's bin folder to your path, you can use the command `kathamo` right away from your terminal.
+
+However, if you prefer not to modify the `PATH` variable, you can also create an alias in your `.bashrc` or `.zshrc` file like below:
+
+`alias kathamo="$(composer config -g home)/vendor/bin/kathamo"`
 
 <br />
 <br />
@@ -36,4 +39,5 @@ kathamo make:service
 
 ## Architecture
 
-<Image src="/src/images/Kathamo-architecture.png" width={550} height={350} alt="Kathamo architecture" />
+<br />
+<Image src="/src/images/Kathamo-architecture.png" width={650} height={350} alt="Kathamo architecture" />
